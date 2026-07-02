@@ -1,58 +1,64 @@
 const steps = [
   {
     number: "01",
-    title: "Discovery",
+    title: "Analisi",
     description:
-      "Analizziamo il progetto, definiamo gli obiettivi e progettiamo la soluzione migliore.",
+      "Studiamo il progetto, gli obiettivi e definiamo insieme la soluzione migliore."
   },
   {
     number: "02",
-    title: "Development",
+    title: "Sviluppo",
     description:
-      "Realizziamo software moderni seguendo standard elevati e attenzione ai dettagli.",
+      "Realizziamo il software con tecnologie moderne mantenendo il codice pulito e scalabile."
   },
   {
     number: "03",
-    title: "Launch",
+    title: "Deploy",
     description:
-      "Deploy, test, supporto e miglioramenti continui per garantire risultati nel tempo.",
-  },
+      "Pubblichiamo il progetto e forniamo assistenza continua e aggiornamenti."
+  }
 ];
 
 export default function Workflow() {
   return (
-    <section className="max-w-7xl mx-auto px-6 py-40">
+    <section className="max-w-7xl mx-auto px-8 py-40">
 
       <div className="mb-20">
 
-        <p className="uppercase tracking-[0.25em] text-zinc-500 text-sm">
+        <span className="text-zinc-500 uppercase tracking-[0.3em]">
           Workflow
-        </p>
+        </span>
 
         <h2 className="text-5xl font-bold mt-4">
-          A clear process.
+          Come lavoriamo
         </h2>
 
       </div>
 
-      <div className="grid md:grid-cols-3 gap-10">
+      <div className="space-y-10">
 
         {steps.map((step) => (
           <div
             key={step.number}
-            className="border-l border-zinc-800 pl-8"
+            className="flex gap-10 border-b border-zinc-800 pb-10"
           >
-            <p className="text-zinc-600 text-5xl font-bold mb-6">
+
+            <span className="text-6xl font-bold text-zinc-700">
               {step.number}
-            </p>
+            </span>
 
-            <h3 className="text-2xl font-semibold mb-4">
-              {step.title}
-            </h3>
+            <div>
 
-            <p className="text-zinc-400 leading-8">
-              {step.description}
-            </p>
+              <h3 className="text-3xl font-semibold mb-3">
+                {step.title}
+              </h3>
+
+              <p className="text-zinc-400 max-w-2xl leading-8">
+                {step.description}
+              </p>
+
+            </div>
+
           </div>
         ))}
 
